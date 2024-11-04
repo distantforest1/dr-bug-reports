@@ -23,24 +23,24 @@ def tick args
   end
 
 
-  args.outputs.primitives << {
-                x: 1280/2,
-                y: 720/2,
-                w: 200,
-                h: 200,
-                angle: 0,
-                path: "sprites/circle/red.png"
-              }
+  out = { x: 1280/2,
+          y: 720/2,
+          w: 200,
+          h: 200,
+          angle: 0,
+          path: "sprites/circle/red.png"
+        }
+
+  # out =  { x: 1280/2,
+  #          y: 720/2,
+  #          w: 200,
+  #          h: 200,
+  #          angle: 0,
+  #          path: "sprites/circle/red_png8indexed.png"
+  #         }
+  args.outputs.primitives <<  out
 
   # Uncomment this to try png8
-  # args.outputs.primitives << {
-  #               x: 1280/2,
-  #               y: 720/2,
-  #               w: 200,
-  #               h: 200,
-  #               angle: 0,
-  #               path: "sprites/circle/red_png8indexed.png"
-  #             }
 
 
 end
