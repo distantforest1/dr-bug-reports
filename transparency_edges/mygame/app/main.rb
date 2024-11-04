@@ -1,7 +1,11 @@
 # Engine tick
 def tick args
   args.outputs.background_color = [100, 100, 100]
+
   img = {w: 1920, h: 528, path: "sprites/bg03_0001.png" }
+
+  # Uncomment this to try png8 instead
+  # img = {w: 1920, h: 528, path: "sprites/bg03_0001_png8indexed.png" }
 
 
   # Keep Aspect ratio of sprite
@@ -22,11 +26,21 @@ def tick args
   args.outputs.primitives << {
                 x: 1280/2,
                 y: 720/2,
-                w: 80,
-                h: 80,
-                angle: 37,
+                w: 200,
+                h: 200,
+                angle: 0,
                 path: "sprites/circle/red.png"
               }
+
+  # Uncomment this to try png8
+  # args.outputs.primitives << {
+  #               x: 1280/2,
+  #               y: 720/2,
+  #               w: 200,
+  #               h: 200,
+  #               angle: 0,
+  #               path: "sprites/circle/red_png8indexed.png"
+  #             }
 
 
 end
